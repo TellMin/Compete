@@ -6,29 +6,15 @@ using static System.Console;
 
 public class Program
 {
+    public void Solve(ConsoleInput cin)
+    {
+
+    }
+
     public static void Main(string[] args)
     {
         SourceExpander.Expander.Expand();
         new Program().Solve(new ConsoleInput(Console.In, ' '));
-    }
-
-    public void Solve(ConsoleInput cin)
-    {
-        long N = cin.ReadLong;
-        string S = cin.ReadLine;
-        char[] chars = S.ToCharArray();
-
-        for (int i = 0; i < N - 1; i++)
-        {
-            var combined = $"{chars[i].ToString() + chars[i + 1].ToString()}";
-
-            if (combined == "ab" || combined == "ba")
-            {
-                WriteLine("Yes");
-                return;
-            }
-        }
-        WriteLine("No");
     }
 }
 
