@@ -15,6 +15,7 @@ public class Program
     public static void Main(string[] args)
     {
         SourceExpander.Expander.Expand();
+        //https://qiita.com/Camypaper/items/de6d576fe5513743a50e
         var sw = new StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
         Console.SetOut(sw);
         new Program().Solve(new ConsoleInput(Console.In, ' '));
