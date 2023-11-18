@@ -8,13 +8,17 @@ public class Program
 {
     public void Solve(ConsoleInput cin)
     {
-
+        var X = cin.ReadLine;
+        WriteLine(X);
     }
 
     public static void Main(string[] args)
     {
         SourceExpander.Expander.Expand();
+        var sw = new StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
+        Console.SetOut(sw);
         new Program().Solve(new ConsoleInput(Console.In, ' '));
+        Console.Out.Flush();
     }
 }
 
