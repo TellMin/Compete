@@ -6,10 +6,12 @@ using static System.Console;
 
 public class Program
 {
+    // long -10^18 から 10^18 
+    // decimal	±1.0 x 10^-28 から ±7.9228 x 10^28
+
     public void Solve(ConsoleInput cin)
     {
-        var X = cin.ReadLine;
-        WriteLine(X);
+
     }
 
     public static void Main(string[] args)
@@ -48,6 +50,7 @@ public class ConsoleInput
     public string ReadLine { get { return _stream.ReadLine(); } }
     public int ReadInt { get { return int.Parse(Read); } }
     public long ReadLong { get { return long.Parse(Read); } }
+    public decimal ReadDecimal { get { return decimal.Parse(Read); } }
     public double ReadDouble { get { return double.Parse(Read); } }
     public string[] ReadStrArray(long N) { var ret = new string[N]; for (long i = 0; i < N; ++i) ret[i] = Read; return ret; }
     public int[] ReadIntArray(long N) { var ret = new int[N]; for (long i = 0; i < N; ++i) ret[i] = ReadInt; return ret; }
