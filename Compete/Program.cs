@@ -1,9 +1,4 @@
-﻿using AtCoder;
-using System;
-using System.Linq;
-using System.Security.Cryptography;
-using static System.Console;
-using Compete.Problems;
+﻿using Compete.Problems;
 
 public class Program
 {
