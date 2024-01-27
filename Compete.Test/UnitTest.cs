@@ -19,7 +19,7 @@ public class UnitTest
 
         sw.Flush();
         ms.Seek(0, SeekOrigin.Begin);
-        return new StreamReader(ms).ReadToEnd();
+        return new StreamReader(ms).ReadToEnd().Replace("\r","").Replace("\n","");
     }
 
 
@@ -32,7 +32,7 @@ public class UnitTest
             return;
         }
         var result = RunTest(input, Compete.Problems.A.Solve);
-        Assert.AreEqual(expected, result);
+        Assert.AreEqual(expected.Replace("\r", "").Replace("\n", ""), result);
     }
 
     [TestMethod]
@@ -44,7 +44,7 @@ public class UnitTest
             return;
         }
         var result = RunTest(input, Compete.Problems.B.Solve);
-        Assert.AreEqual(expected, result);
+        Assert.AreEqual(expected.Replace("\r", "").Replace("\n", ""), result);
     }
 
     [TestMethod]
@@ -55,8 +55,8 @@ public class UnitTest
         {
             return;
         }
-        var result = RunTest(input, Compete.Problems.B.Solve);
-        Assert.AreEqual(expected, result);
+        var result = RunTest(input, Compete.Problems.C.Solve);
+        Assert.AreEqual(expected.Replace("\r", "").Replace("\n", ""), result);
     }
 
     [TestMethod]
@@ -67,8 +67,8 @@ public class UnitTest
         {
             return;
         }
-        var result = RunTest(input, Compete.Problems.B.Solve);
-        Assert.AreEqual(expected, result);
+        var result = RunTest(input, Compete.Problems.D.Solve);
+        Assert.AreEqual(expected.Replace("\r", "").Replace("\n", ""), result);
     }
 
     [TestMethod]
@@ -79,7 +79,7 @@ public class UnitTest
         {
             return;
         }
-        var result = RunTest(input, Compete.Problems.B.Solve);
-        Assert.AreEqual(expected, result);
+        var result = RunTest(input, Compete.Problems.E.Solve);
+        Assert.AreEqual(expected.Replace("\r", "").Replace("\n", ""), result);
     }
 }

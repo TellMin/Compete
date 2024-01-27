@@ -20,7 +20,7 @@ public static class E
         //https://qiita.com/Camypaper/items/de6d576fe5513743a50e
         var sw = new StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
         Console.SetOut(sw);
-        A.Solve(new ConsoleInput(Console.In, ' '));
+        E.Solve(new ConsoleInput(Console.In, ' '));
         Console.Out.Flush();
     }
 }
